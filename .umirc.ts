@@ -20,9 +20,9 @@ export default defineConfig({
       component: './Home',
     },
     {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
+      name: '切换地图',
+      path: '/switchMap',
+      component: './SwitchMap',
     },
     {
       name: ' CRUD 示例',
