@@ -23,4 +23,12 @@ declare namespace API {
             [propName:string]:any;
         }
     }
+    type InitializedMapProps={
+        mapObj:any;
+        mapDOM: HTMLDivElement;
+        mapTools:{
+            /** 绘制图形工具 */
+            createDrawTool:(map:any)=>void;
+        }
+    }
 }

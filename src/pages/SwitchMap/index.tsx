@@ -21,8 +21,9 @@ const SwitchMap=()=>{
         map?.remove?.();
         setCurrent(value);
     }
-    const onloadMapComplete = (mapObj:any)=>{
+    const onloadMapComplete = ({mapObj,mapTools}:API.InitializedMapProps)=>{
         setMap(mapObj);
+        mapTools?.createDrawTool?.(mapObj);
     }
     return (
         <div className={styles.switchMap}>
