@@ -18,8 +18,10 @@ const SwitchMap=()=>{
         console.log('=======切换地图列表',switchMapList)
     },[currentMap])
     const handleChange = (value: string) =>{
-        map?.remove?.();
         setCurrent(value);
+    }
+    const finishDrawGraph=(graphData:any)=>{
+        console.log('===========绘制图形完成',graphData)
     }
     const onloadMapComplete = ({mapObj,mapTools}:API.InitializedMapProps)=>{
         setMap(mapObj);
@@ -38,6 +40,7 @@ const SwitchMap=()=>{
             <MapsTool
                 id={'mapId'}
                 onloadMapComplete={onloadMapComplete}
+                finishDrawGraph={finishDrawGraph}
             />
         </div>
     )
